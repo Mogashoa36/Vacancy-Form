@@ -1,0 +1,33 @@
+form{
+    background-color: lavender;
+    padding: 2%;
+    
+}
+.content{
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: 12px;
+    font-size: medium;
+  }
+  
+  input[type="text"], select, .btn {
+    width: 40%;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  textarea{
+    width: 30%;
+  }
+

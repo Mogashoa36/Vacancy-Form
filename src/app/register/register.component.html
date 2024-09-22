@@ -1,0 +1,214 @@
+<form>
+    <h2>Personal Information</h2>
+    <button  mat-raised-button [routerLink]="['/homepage']">Back To Post</button>
+    <div class="content">
+
+  
+    <div class="form-group">
+      <label for="surname">Surname and Full Names</label>
+      <br>
+      <input type="text" id="surname" name="surname" class="form-control" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="dob">Date of Birth (DD/MM/YYYY)</label>
+      <br>
+      <input type="text" id="dob" name="dob" class="form-control" placeholder="DD/MM/YYYY" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="idNumber">Identity Number</label>
+      <br>
+      <input type="text" id="idNumber" name="idNumber" class="form-control" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="passportNumber">Passport Number</label>
+      <br>
+      <input type="text" id="passportNumber" name="passportNumber" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="race">Race</label>
+      <br>
+      <select id="race" name="race" class="form-control" required>
+        <option value="African">African</option>
+        <option value="White">White</option>
+        <option value="Coloured">Coloured</option>
+        <option value="Indian">Indian</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <br>
+      <select id="gender" name="gender" class="form-control" required>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="disability">Do you have a disability?</label>
+      <div>
+        <label>
+          <input type="radio" name="disability" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="disability" value="No"> No
+        </label>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="saCitizen">Are you a South African citizen?</label>
+      <div>
+        <label>
+          <input type="radio" name="saCitizen" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="saCitizen" value="No"> No
+        </label>
+      </div>
+    </div>
+  
+    <div class="form-group" *ngIf="!saCitizen">
+      <label for="nationality">If no, what is your nationality?</label>
+      <input type="text" id="nationality" name="nationality" class="form-control">
+    </div>
+  
+    <!-- Add more form fields here -->
+    <div class="form-group" *ngIf="!saCitizen">
+        <label for="workPermit">Do you have a valid work permit? (only if non-South African)</label>
+        <div>
+          <label>
+            <input type="radio" name="workPermit" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="workPermit" value="No"> No
+          </label>
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="criminalConvicted">Have you been convicted or found guilty of a criminal offence (including an admission of guilt)?</label>
+        <div>
+          <label>
+            <input type="radio" name="criminalConvicted" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="criminalConvicted" value="No"> No
+          </label>
+        </div>
+        <textarea id="criminalConvictedDetails" name="criminalConvictedDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></>
+      </div>
+    
+      <div class="form-group">
+        <label for="pendingCriminalCase">Do you have any pending criminal case against you?</label>
+        <div>
+          <label>
+            <input type="radio" name="pendingCriminalCase" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="pendingCriminalCase" value="No"> No
+          </label>
+        </div>
+        <textarea id="pendingCriminalCaseDetails" name="pendingCriminalCaseDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="misconductDismissal">Have you ever been dismissed for misconduct from the Public Service?</label>
+        <div>
+          <label>
+            <input type="radio" name="misconductDismissal" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="misconductDismissal" value="No"> No
+          </label>
+        </div>
+        <textarea id="misconductDismissalDetails" name="misconductDismissalDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="pendingDisciplinaryCase">Do you have any pending disciplinary case against you?</label>
+        <div>
+          <label>
+            <input type="radio" name="pendingDisciplinaryCase" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="pendingDisciplinaryCase" value="No"> No
+          </label>
+        </div>
+        <textarea id="pendingDisciplinaryCaseDetails" name="pendingDisciplinaryCaseDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="resignedDisciplinaryProceeding">Have you resigned from a recent job pending any disciplinary proceeding against you?</label>
+        <div>
+          <label>
+            <input type="radio" name="resignedDisciplinaryProceeding" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="resignedDisciplinaryProceeding" value="No"> No
+          </label>
+        </div>
+        <textarea id="resignedDisciplinaryProceedingDetails" name="resignedDisciplinaryProceedingDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="illHealthRetired">Have you been discharged or retired from the Public Service on grounds of Ill-health or on condition that your cannot be re-employed?</label>
+        <div>
+          <label>
+            <input type="radio" name="illHealthRetired" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="illHealthRetired" value="No"> No
+          </label>
+        </div>
+        <textarea id="illHealthRetiredDetails" name="illHealthRetiredDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="businessState">Are you conducting business with the State or are you a Director of a Public or Private company conducting business with the State?</label>
+        <div>
+          <label>
+            <input type="radio" name="businessState" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="businessState" value="No"> No
+          </label>
+        </div>
+        <textarea id="businessStateDetails" name="businessStateDetails" class="form-control mt-2" rows="3" placeholder="Provide details if yes"></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="relinquishBusiness">In the event that you are employed in the Public Service, will you immediately relinquish such business interests?</label>
+        <div>
+          <label>
+            <input type="radio" name="relinquishBusiness" value="Yes"> Yes
+          </label>
+          <label>
+            <input type="radio" name="relinquishBusiness" value="No"> No
+          </label>
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="yearsExperience">Please specify the total number of years of experience you have:</label>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="yearsExperiencePrivate">Private Sector</label>
+            <input type="number" id="yearsExperiencePrivate" name="yearsExperiencePrivate" class="form-control" min="0">
+          </div>
+          <div class="col-md-6">
+            <label for="yearsExperiencePublic">Public Sector</label>
+            <input type="number" id="yearsExperiencePublic" name="yearsExperiencePublic" class="form-control" min="0">
+          </div>
+        </div>
+      </div>
+  
+    <button type="submit" mat-raised-button>Submit</button>
+</div>
+  </form>
+  
